@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "user_record")
+@Table(name = "users_record")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
