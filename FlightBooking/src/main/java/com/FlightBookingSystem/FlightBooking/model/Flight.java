@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.math.BigInteger;
 
 @Data
 @NoArgsConstructor
@@ -14,7 +15,7 @@ import javax.validation.constraints.Size;
 public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer flightNo;
+    private BigInteger flightNo;
     @Size(min = 2, max = 20)
     @NotNull(message = "Pls Enter Carrier Name!")
     private String carrierName;
@@ -29,7 +30,7 @@ public class Flight {
 
 
 
-    public Flight(Integer flightNo, String carrierName, String flightModel,Integer seatCapacity) {
+    public Flight(BigInteger flightNo, String carrierName, String flightModel,Integer seatCapacity) {
         this.flightNo = flightNo;
         this.carrierName = carrierName;
         this.flightModel = flightModel;
