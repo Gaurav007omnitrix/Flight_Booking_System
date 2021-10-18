@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.math.BigInteger;
 
 @Data
 @NoArgsConstructor
@@ -14,7 +15,7 @@ import javax.validation.constraints.Size;
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer userId;
+    private BigInteger userId;
     @Size(min = 2, max = 20)
     @NotNull(message = "Pls Enter User Name!")
     private String userName;
@@ -33,7 +34,7 @@ public class Users {
     private String userType;
 
 
-    public Users(String userName, String userPassword, Integer userPhone, String userEmail, String userType, Integer userId) {
+    public Users(String userName, String userPassword, Integer userPhone, String userEmail, String userType, BigInteger userId) {
         this.userName = userName;
         this.userPassword = userPassword;
         this.userPhone = userPhone;
