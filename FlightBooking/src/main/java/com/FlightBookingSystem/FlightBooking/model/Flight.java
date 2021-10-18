@@ -14,7 +14,7 @@ import java.math.BigInteger;
 @Table(name = "flights_record")
 public class Flight {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private BigInteger flightNo;
     @Size(min = 2, max = 20)
     @NotNull(message = "Pls Enter Carrier Name!")

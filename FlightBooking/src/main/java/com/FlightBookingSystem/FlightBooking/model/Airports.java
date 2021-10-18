@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
 @Table(name = "airports_record")
 public class Airports {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private String airportCode;
     @Size(min = 2, max = 20)
     @NotNull(message = "Pls Enter Airport Name!")

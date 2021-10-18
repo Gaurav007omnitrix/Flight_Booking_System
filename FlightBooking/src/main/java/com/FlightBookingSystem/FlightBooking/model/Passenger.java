@@ -11,7 +11,7 @@ import java.math.BigInteger;
 @Table(name="passenger_record")
 public class Passenger {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private BigInteger pnrNumber;
     private String passengerName;
     private int passengerAge;

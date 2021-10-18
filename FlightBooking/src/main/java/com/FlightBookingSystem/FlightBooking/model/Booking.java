@@ -12,7 +12,7 @@ import java.math.BigInteger;
 @Table(name = "booking_record")
 public class Booking {
         @Id
-        @GeneratedValue(strategy= GenerationType.AUTO)
+
         private BigInteger bookingId;
         private String bookingDate;
         private int noOfPassengers;

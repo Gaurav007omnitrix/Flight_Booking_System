@@ -14,7 +14,7 @@ import java.math.BigInteger;
 @Table(name = "users_record")
 public class Users {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private BigInteger userId;
     @Size(min = 2, max = 20)
     @NotNull(message = "Pls Enter User Name!")

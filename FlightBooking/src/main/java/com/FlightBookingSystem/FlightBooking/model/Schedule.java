@@ -12,7 +12,7 @@ import java.math.BigInteger;
     public class Schedule {
         @Id
         @Column(name = "schedule_Id")
-        @GeneratedValue(strategy = GenerationType.AUTO)
+
         private BigInteger scheduleId;
 
         @OneToOne(fetch = FetchType.EAGER)
