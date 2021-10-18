@@ -14,13 +14,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class AirportServiceImpl implements AirportService {
     @Autowired
-    AirportRepository airportRepository;              /** view all Airports*/
+    AirportRepository airportRepository;
     @Override
     public Iterable<Airports> viewAllAirport() {
         return airportRepository.findAll();
     }
 
-    /** view airport by airportCode */
     @Override
     public Airports viewAirport(String airportCode) {
         Optional<Airports> findById = airportRepository.findById(airportCode);
@@ -38,7 +37,7 @@ public class AirportServiceImpl implements AirportService {
 		}
         }*/
 
-    /** add a airport  */
+
     @Override
     public ResponseEntity<?> addAirport(Airports airport) {
         Optional<Airports> findById = airportRepository.findById(airport.getAirportCode());
@@ -57,7 +56,7 @@ public class AirportServiceImpl implements AirportService {
         }
     }
 
-    /** modify an Airport */
+
     @Override
     public Airports modifyAirport(Airports airport) {
         Optional<Airports> findById = airportRepository.findById(airport.getAirportCode());
@@ -69,7 +68,7 @@ public class AirportServiceImpl implements AirportService {
         return airport;
     }
 
-    /** remove an airport*/
+
     @Override
     public String removeAirport(String airportCode) {
         Optional<Airports> findById = airportRepository.findById(airportCode);
