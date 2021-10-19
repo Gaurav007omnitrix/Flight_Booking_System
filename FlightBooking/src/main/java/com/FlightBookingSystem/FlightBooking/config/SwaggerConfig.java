@@ -27,7 +27,8 @@ public class SwaggerConfig {
     private ApiInfo metaData(){
         return new ApiInfoBuilder()
                 .title("FLIGHT BOOKING SYSTEM REST APIs")
-                .description("\"Swagger Configuration for Application\"")
+                .description("\"CREATED BY GAURAV KUMAR MAHATO\"")
+                //.description("\"Swagger Configuration for Application\"")
                 .version("1.2.0")
                 .license("Apache License")
                 .build();
