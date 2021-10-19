@@ -29,7 +29,7 @@ public class ScheduledFlightController {
 	@Autowired
 	FlightService flightService;
 
-	/** Controller for adding Scheduled Flights */
+
 	@PostMapping("/add")
 	public ResponseEntity<ScheduledFlight> addSF(@ModelAttribute ScheduledFlight scheduledFlight,
 												 @RequestParam(name = "srcAirport") String source, @RequestParam(name = "dstnAirport") String destination,
@@ -63,7 +63,7 @@ public class ScheduledFlightController {
 		}
 	}
 
-	/** Controller for modifying existing Scheduled Flights*/
+
 	@PutMapping("/modify")
 	public ResponseEntity<ScheduledFlight> modifyScheduleFlight(@ModelAttribute ScheduledFlight scheduleFlight) {
 		ScheduledFlight modifySFlight = scheduleFlightService.modifyScheduledFlight(scheduleFlight);
@@ -75,13 +75,13 @@ public class ScheduledFlightController {
 
 	}
 
-	/** Controller for deleting existing Scheduled Flights */
+
 	@DeleteMapping("/delete")
 	public String deleteSF(@RequestParam BigInteger flightId) throws RecordNotFoundException {
 		return scheduleFlightService.removeScheduledFlight(flightId);
 	}
 
-	/** Controller for viewing a Scheduled Flight by ID */
+
 	@GetMapping("/search")
 	@ExceptionHandler(ScheduledFlightNotFoundException.class)
 	public ResponseEntity<ScheduledFlight> viewSF(@RequestParam BigInteger flightId) throws ScheduledFlightNotFoundException {
@@ -93,7 +93,7 @@ public class ScheduledFlightController {
 		}
 	}
 
-	/** Controller for viewing all Scheduled Flights */
+
 	@GetMapping("/viewAll")
 	public Iterable<ScheduledFlight> viewAllSF() {
 		return scheduleFlightService.viewAllScheduledFlights();
